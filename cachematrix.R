@@ -7,17 +7,15 @@
 ## 3.-4. Setting and getting a value of an inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
-  makeCacheMatrix <- function(x = matrix()) {
-    inv = NULL ## sets the value to NULL as default 
-    set = function(y) {
-
-      x <<- y ## caches the inputted matrix to check whether it was changed
-      inv <<- NULL
-    }
-    get = function() x
-    setinverse = function(inverse) inv <<- inverse 
-    getinverse = function() inv
-    list(set=set, get=get, setinverse=setinverse, getinverse=getinverse)
+  inv = NULL ## sets the value to NULL as default 
+  set = function(y) {
+    x <<- y ## caches the inputted matrix to check whether it was changed
+    inv <<- NULL
+  }
+  get = function() x
+  setinv = function(inverse) inv <<- inverse 
+  getinv = function() inv
+  list(set=set, get=get, setinv=setinv, getinv=getinv)
 }
 
 
